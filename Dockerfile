@@ -1,5 +1,6 @@
 FROM httpd:latest
 RUN apt-get update
+RUN apt-get -y git
 EXPOSE 80
 RUN rm -Rf /var/www/html/*
 RUN git clone https://github.com/ElieGel/static-website-example.git /var/www/html/
